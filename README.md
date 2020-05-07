@@ -273,4 +273,4 @@ When all properties of <b>conditions</b> empty, waiting reacts to all gotten eve
 <p>Set of properties, need for actions, equals to documentation, except <b>sendFile</b> and <b>sendVoice</b>. You can send uploaded file and write property 'fileId' or upload new file and send it. In the second case, you must write two properties instead of 'chatId': <b>'location'</b> (local path to file) and <b>'fileName'</b> (necessarily with format)</p>
 <blockquote><b>ICQAction.act()</b> returns object, described in <a href='https://icq.com/botapi'>ICQ New BotAPI documentation</a></blockquote>
 <h2>Conclusion</h2>
-<p>You can write questions here, in <a href='https://github.com/artomich/icq-bot-node/issues'>issues</a> or send it to me: <a href='mailto:artomich.work.1@gmail.com'>artomich.work.1@gmail.com</a></p>
+<p>You can write questions in <a href='https://github.com/artomich/icq-bot-node/issues'>issues</a> or send it to me: <a href='mailto:artomich.work.1@gmail.com'>artomich.work.1@gmail.com</a></p>

@@ -71,10 +71,10 @@ bot.onCheckFail = (bot) => {
 (ICQLife).waitings   //bound waitings (you'll know about <b>ICQWaiting</b> in the appropriate section) <b>(only for reading, is empty default; array)</b>
 </p>
 <p>
-(ICQLife).listen()    //run event-listening of bot. It's asynchronously function and it is special ICQLife event <b>onlisten</b> existed.
+(ICQLife).listen()    //run event-listening of bot. It's asynchronously function. Special ICQLife event <b>onlisten</b> exists for beginning of listening detecting
 </p>
 <p>
-(ICQLife).stopListen()    //pause event-listening of bot. It's asynchronously function and it is special ICQLife event <b>onStopListen</b> existed
+(ICQLife).stopListen()    //pause event-listening of bot. It's asynchronously function. Special ICQLife event <b>onStopListen</b> exist for stopping of listening detecting
 </p>
 <p>
 (ICQLife).bindWaitings(<i>/waitings array/</i>)   //bind one or more ICQWaiting classes to the bot (you'll know about <b>ICQWaiting</b> in the appropriate section). It's synchronously function, returned object with property <b>waitingsLength</b>, contained a number of bound waitings

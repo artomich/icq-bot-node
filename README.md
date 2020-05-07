@@ -22,7 +22,7 @@
 <p>So, recommend you to see <a href='https://icq.com/botapi'>ICQ New BotAPI documentation</a> before working with this module. There you'll see facilities of API, which realized here. Any additional features didn't add <b>intend</b>...</p>
 <h2>Installation</h2>
 <pre><code>npm i icq-bot-node</code></pre>
-<p>Some dependecies will be installed with icq-bot-node. Mainly, <b>node-fetch</b> and <b>form-data</b> for queries</p>
+<p>Some dependencies will be installed with icq-bot-node. Mainly, <b>node-fetch</b> and <b>form-data</b> for queries</p>
 <h2>Life</h2>
 <h3>Creating</h3>
 <p>Bot object is <b>ICQLife class</b> here</p>
@@ -34,7 +34,7 @@ const TOKEN = '000.000000000.000000000:00000000'; //dont't forget about bot toke
 const bot = new ICQLife(TOKEN);
   </code>
 </pre>
-<p>ICQLife constructor gets only one argument - secret bot token. At once it run <b>checking</b> - you'l see in console this yellow-font message:</p>
+<p>ICQLife constructor gets only one argument - secret bot token. At once it runs <b>checking</b> - you'll see in console this yellow-font message:</p>
 <pre><code>Checking and finding information about this bot (<i>/there will be token/</i>)...</code></pre>
 <p>If checking will be succesfull, console write green-font (what is surprisingly, german) message. Else, it wil be red-font message with error description, like:</p>
 <pre><code>Bot checking error: Error response from ICQ. Description: invalid token. Token: (<i>/there will be your invalid token/</i>)</code></pre>
@@ -55,36 +55,36 @@ bot.onCheckFail = (bot) => {
 </pre>
 <blockquote>You can create several ICQLife with one token. They will be work in parallel</blockquote>
 <h3>Methods and properties</h3>
-<p>ICQLife class give this properties and methods:</p>
+<p>ICQLife class give these properties and methods:</p>
 <pre>
   <code>
 <p>
 (ICQLife).token   //bot secret token <b>(only for reading; string)</b>
 </p>
 <p>
-(ICQLife).me   //bot information <b>(only for reading; form after checking; object). You can see object, which stores in this property in <a href='https://icq.com/botapi/#/self/get_self_get'>there</a></b>
+(ICQLife).me   //bot information <b>(only for reading; form after checking; object). You can see the object, which stores in this property <a href='https://icq.com/botapi/#/self/get_self_get'>there</a></b>
 </p>
 <p>
-(ICQLife).store   //special user store <b>(writable, defaultly - empty; object)</b>
+(ICQLife).store   //special user store <b>(writable, is empty default; object)</b>
 </p>
 <p>
-(ICQLife).waitings   //binded waitings (you'll know about <b>ICQWaiting</b> in appropriate section) <b>(only for reading, defaultly - empty; array)</b>
+(ICQLife).waitings   //bound waitings (you'll know about <b>ICQWaiting</b> in the appropriate section) <b>(only for reading, is empty default; array)</b>
 </p>
 <p>
-(ICQLife).listen()    //run event-listening of bot. It's asynchronously function and exist special ICQLife event <b>onlisten</b>
+(ICQLife).listen()    //run event-listening of bot. It's asynchronously function and it is special ICQLife event <b>onlisten</b> existed.
 </p>
 <p>
-(ICQLife).stopListen()    //pause event-listening of bot. It's asynchronously function and exist special ICQLife event <b>onStopListen</b>
+(ICQLife).stopListen()    //pause event-listening of bot. It's asynchronously function and it is special ICQLife event <b>onStopListen</b> existed
 </p>
 <p>
-(ICQLife).bindWaitings(<i>/waitings array/</i>)   //bind one or more ICQWaiting classes to bot (you'll know about <b>ICQWaiting</b> in appropriate section). It's synchronously function, returned object with property <b>waitingsLength</b>, contained number of binded waitings
+(ICQLife).bindWaitings(<i>/waitings array/</i>)   //bind one or more ICQWaiting classes to the bot (you'll know about <b>ICQWaiting</b> in the appropriate section). It's synchronously function, returned object with property <b>waitingsLength</b>, contained a number of bound waitings
 </p>
 <p>
-(ICQLife).unbindWaitings(<i>/waiting index or nothing/</i>)   //unbind one or all ICQWaiting classes out of bot. Unbind all binded waitings on calling without argument. It's synchronously function, returned object with property <b>waitingsLength</b>, contained number of binded waitings
+(ICQLife).unbindWaitings(<i>/waiting index or nothing/</i>)   //unbind one or all ICQWaiting classes out of bot. Unbind all bound waitings on call without argument. It's synchronously function, returned object with property <b>waitingsLength</b>, contained a number of bound waitings
 </p>
   </code>
 </pre>
-<blockquote>Every function of this module returns object. If it isn't any information for returning, function can return empty object. If error happends, function necessarily return object with property <b>error</b>. Also red-font message with error description is written in console.</blockquote>
+<blockquote>Every function of this module returns an object. If it isn't any information for returning, the function can return an empty object. If any error happens, function necessarily returns an object with property <b>error</b>. Also, a red-font message with error description is written in the console.</blockquote>
 <pre>
 <code>
   const result = bot.bindWaitings(waiting1, waiting2);  //there is error - waiting isn't combined in array
@@ -109,7 +109,7 @@ bot.onCheckFail = (bot) => {
   };
 </code>
 </pre>
-<p>ICQWaiting constructor get one argument - waiting type. It matches event types in ICQ New BotAPI documentation (<a href='https://icq.com/botapi/#/events/get_events_get'>there</a>). Here is a list of this types:</p>
+<p>ICQWaiting constructor gets one argument - waiting type. It matches event types in ICQ New BotAPI documentation (<a href='https://icq.com/botapi/#/events/get_events_get'>there</a>). Here is a list of these types:</p>
 <pre>
   <code>
   'newMessage'
@@ -136,42 +136,43 @@ bot.onCheckFail = (bot) => {
 </code>
 </pre>
 <h3>Methods and properties</h3>
-<p>ICQWaiting class give this properties and methods:</p>
+<p>ICQWaiting class give these properties and methods:</p>
 <pre>
   <code>
 <p>
 (ICQWaiting).type   //type of waiting <b>(only for reading; string)</b>
 </p>
 <p>
-(ICQWaiting).myBot   //bot information <b>(only for reading; form after binding waiting with any ICQLife; object). You can see object, which stores in this property <a href='https://icq.com/botapi/#/self/get_self_get'>there</a></b>
+(ICQWaiting).myBot   //bot information <b>(only for reading; form after binding waiting with any ICQLife; object). You can see the object, which stores in this property <a href='https://icq.com/botapi/#/self/get_self_get'>there</a></b>
 </p>
 <p>
-(ICQWaiting).actions   //binded actions (you'll know about <b>ICQAction</b> in appropriate section) <b>(only for reading, defaultly - empty; array)</b>
+(ICQWaiting).actions   //bound actions (you'll know about <b>ICQAction</b> in the appropriate section) <b>(only for reading, 
+is empty default; array)</b>
 </p>
 <p>
-(ICQWaiting).conditions   //special conditions, which waiting uses for detecting right event source. It is <b>object</b>, consisted of three <b>writable and defaultly empty array properties:
+(ICQWaiting).conditions   //special conditions, which waiting uses for detecting right event source. It is an <b>object</b>, consisted of three <b>writable and default empty array properties:
 
-chats (you can push id of chats, then this waiting will be ignore all events, gotten from other chats)
-ignoreChats (you can push id of chats, then this waiting will be ignore all events, gotten from this chats)
-typeChats (you can push type of chats, then this waiting will be ignore all events, gotten from chats of other type. There are three chat types: <i>private, group and channel</i>)</b>
+chats (you can push id of chats, then this waiting will ignore all events, gotten from other chats)
+ignoreChats (you can push id of chats, then this waiting will ignore all events, gotten from this chats)
+typeChats (you can push type of chats, then this waiting will ignore all events, gotten from chats of other type. There are three chat types: <i>private, group and channel</i>)</b>
 
-When all properties of <b>conditions</b> empty, waiting react to all gotten events
+When all properties of <b>conditions</b> empty, waiting reacts to all gotten events
 </p>
 <p>
-(ICQWaiting).stop()    //pause waiting. It won't react to gotten events after this method calling
+(ICQWaiting).stop()    //pause waiting. It won't react to gotten events after this method call
 </p>
 <p>
 (ICQWaiting).run()    //run waiting, which was paused
 </p>
 <p>
-(ICQWaiting).bindActions(<i>/actions array/</i>)   //bind one or more ICQAction classes to waiting (you'll know about <b>ICQAction</b> in appropriate section). It's synchronously function, returned object with property <b>actionsLength</b>, contained number of binded actions
+(ICQWaiting).bindActions(<i>/actions array/</i>)   //bind one or more ICQAction classes to waiting (you'll know about <b>ICQAction</b> in appropriate section). It's synchronously function, returned object with property <b>actionsLength</b>, contained a number of bound actions
 </p>
 <p>
-(ICQWaiting).unbindActions(<i>/action index or nothing/</i>)   //unbind one or more ICQAction classes out of waiting (you'll know about <b>ICQAction</b> in appropriate section). Unbind all binded actions on calling without argument. It's synchronously function, returned object with property <b>actionsLength</b>, contained number of binded actions
+(ICQWaiting).unbindActions(<i>/action index or nothing/</i>)   //unbind one or more ICQAction classes out of waiting (you'll know about <b>ICQAction</b> in appropriate section). Unbind all bound actions on call without argument. It's synchronously function, returned object with property <b>actionsLength</b>, contained a number of bound actions
 </p>
   </code>
 </pre>
-<blockquote>After binding to ICQLife waiting copies in ICQLife property <b>waitings</b> and stores by his index there. If you change original ICQWaiting class it isn't affect on binded copy. Also changings of binded waitings are ignored by original ICQWaiting</blockquote>
+<blockquote>Waiting copies in ICQLife property <b>waitings</b> and stores by his index there after binding to ICQLife. If you change original ICQWaiting class it doesn't affect on a bound copy. Also, changings of bound waitings are ignored by original ICQWaiting</blockquote>
 <pre>
   <code>
   const waiting = new ICQWaiting('pinMessage');
@@ -190,9 +191,9 @@ When all properties of <b>conditions</b> empty, waiting react to all gotten even
   };
   </code>
 </pre>
-<p>But waitings only wait for event getting and filter their. It is useless without binded actions</p>
+<p>But waitings only wait for event getting and filter them. It is useless without bound actions</p>
 <h2>Action</h2>
-<p>Bot answers events with special <b>actions</b>. There are two types of it: user and built-in. User actions are simple <b>desired asynchronous</b> functions, binded with ICQWaiting. Built-in actions are calling of special method of <b>ICQAction object</b></p>
+<p>Bot answers events with special <b>actions</b>. There are two types of it: user and built-in. User actions are simple <b>desired asynchronous</b> functions, bound with ICQWaiting. Built-in actions are calls of special method of <b>ICQAction object</b></p>
 <pre>
 <code>
   const {ICQLife, ICQWaiting, ICQAction} = require('icq-bot-node');
@@ -269,7 +270,7 @@ When all properties of <b>conditions</b> empty, waiting react to all gotten even
   'answerCallbackQuery'
   </code>
 </pre>
-<p>Set of properties, need for actions, equals to documentation, except <b>sendFile</b> and <b>sendVoice</b>. You can send uploaded file and write property 'fileId' or upload new file and send it. In second case you must write two properties instead of 'chatId': <b>'location'</b> (local path to file) and <b>'fileName'</b> (necessarilly with format)</p>
+<p>Set of properties, need for actions, equals to documentation, except <b>sendFile</b> and <b>sendVoice</b>. You can send uploaded file and write property 'fileId' or upload new file and send it. In the second case, you must write two properties instead of 'chatId': <b>'location'</b> (local path to file) and <b>'fileName'</b> (necessarily with format)</p>
 <blockquote><b>ICQAction.act()</b> returns object, described in <a href='https://icq.com/botapi'>ICQ New BotAPI documentation</a></blockquote>
 <h2>Conclusion</h2>
-<p>I know, I could explain badly for public. You can write questions here, in <a href='https://github.com/artomich/icq-bot-node/issues'>issues</a> or send it to me: <a href='mailto:artomich.work.1@gmail.com'>artomich.work.1@gmail.com</a></p>
+<p>You can write questions here, in <a href='https://github.com/artomich/icq-bot-node/issues'>issues</a> or send it to me: <a href='mailto:artomich.work.1@gmail.com'>artomich.work.1@gmail.com</a></p>

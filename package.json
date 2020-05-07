@@ -1,0 +1,44 @@
+{
+  "name": "icq-bot-node",
+  "description": "Node.js module for creating bots with ICQ New API",
+  "version": "0.1.0",
+  "homepage": "https://github.com/artomich/icq-bot-node",
+  "author": {
+    "name": "artomich",
+    "email": "artem.vagin.2000@yandex.ru"
+  },
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/artomich/icq-bot-node"
+  },
+  "bugs": {
+    "url": "https://github.com/artomich/icq-bot-node/issues"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "https://github.com/artomich/icq-bot-node/blob/master/LICENSE-Apache"
+    },
+    {
+      "type": "2.0",
+      "url": "https://github.com/artomich/icq-bot-node/blob/master/LICENSE-2.0"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "icq",
+    "bot",
+    "api",
+    "module"
+  ],
+  "dependencies": {
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.0"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "icq-bot-node",
-  "description": "Node.js module for creating bots with ICQ New API",
-  "version": "0.1.0",
+  "description": "Node.js module for creating bots with ICQ New Bot API",
+  "version": "0.1.1",
   "homepage": "https://github.com/artomich/icq-bot-node",
   "author": {
     "name": "artomich",

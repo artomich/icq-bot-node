@@ -113,6 +113,8 @@ bot.onCheckFail = (bot) => {
 <pre>
   <code>
   'newMessage'
+  'editedMessage'
+  'deletedMessage'
   'pinnedMessage'
   'unpinnedMessage'
   'newChatMembers'

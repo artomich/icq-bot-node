@@ -89,7 +89,7 @@ bot.onCheckFail = (bot) => {
 <code>
   const result = bot.bindWaitings(waiting1, waiting2);  //there is error - waiting isn't combined in array
   if (result.hasOwnProperty('error')) {
-    console.log('Erorr');
+    console.log('Error');
   } else bot.listen();
 </code>
 </pre>

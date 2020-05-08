@@ -174,7 +174,7 @@ When all properties of <b>conditions</b> empty, waiting reacts to all gotten eve
 </p>
   </code>
 </pre>
-<blockquote>Waiting copies in ICQLife property <b>waitings</b> and stores by his index there after binding to ICQLife. If you change original ICQWaiting class it doesn't affect on a bound copy. Also, changings of bound waitings are ignored by original ICQWaiting</blockquote>
+<blockquote>Waiting copies in ICQLife property <b>waitings</b> and stores by his index there after binding with ICQLife. If you change original ICQWaiting class it doesn't affect on a bound copy. Also, changings of bound waitings are ignored by original ICQWaiting</blockquote>
 <pre>
   <code>
   const waiting = new ICQWaiting('pinMessage');

@@ -244,8 +244,39 @@ When all properties of <b>conditions</b> empty, waiting reacts to all gotten eve
 <blockquote>User action get four arguments:</blockquote>
 <p><b>first argument</b> is ICQLife class</p>
 <p><b>second argument</b> is token of this bot</p>
-<p><b>third argument</b> is object with information about gotten event. You can see examples of object, which you can meet in this argument <a href='https://icq.com/botapi/#/events/get_events_get'>there</a></p>
+<p><b>third argument</b> is object with information about gotten event. You can see examples of object, which you can meet in this argument <a href='https://icq.com/botapi/#/events/get_events_get'>there</a>. Also, you'll see example further</p>
 <p><b>four argument</b> is returned data of last done user action</p>
+<blockquote>ICQWaiting allways gives to action one event object. For example:</blockquote>
+<pre>
+  <code>
+    {
+      eventId: 1,
+      type: "newMessage",
+      payload: {
+        msgId: "57883346846815032",
+        chat: {
+        chatId: "681869378@chat.agent",
+        type: "channel",
+        title: "Any channel"
+      },
+      from: {
+        userId: "1234567890",
+        firstName: "Name",
+        lastName: "SurName"
+      },
+      timestamp: 1546290000,
+      text: "Hello, world!",
+      parts: [
+        {
+          type: "sticker",
+          payload: {
+            fileId": "2IWuJzaNWCJZxJWCvZhDYuJ5XDsr7hU"
+          }
+        }
+      ]
+    }
+  </code>
+</pre>
 <blockquote>Built-in action activates with method <b>act()</b>, which has two arguments: <b>object with type of action and data for action</b> (you can see <a href='https://icq.com/botapi'>ICQ New BotAPI documentation</a> and know about properties need for action query)</b> and <b>token</b>. There is a list of action types:</blockquote>
 <pre>
   <code>

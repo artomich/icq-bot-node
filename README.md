@@ -95,7 +95,7 @@ bot.onCheckFail = (bot) => {
 </pre>
 <h2>Waiting</h2>
 <h3>Creating</h3>
-<p>Bot begins listening for events with <b>listen()</b>. But work with gotten events <b>ICQWaiting class</b></p>
+<p>Bot begins listening for events with <b>listen()</b>. But works with gotten events <b>ICQWaiting class</b></p>
 <pre>
 <code>
   const {ICQLife, ICQWaiting} = require('icq-bot-node');

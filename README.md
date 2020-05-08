@@ -255,9 +255,10 @@ When all properties of <b>conditions</b> empty, waiting reacts to all gotten eve
       payload: {
         msgId: "57883346846815032",
         chat: {
-        chatId: "681869378@chat.agent",
-        type: "channel",
-        title: "Any channel"
+          chatId: "681869378@chat.agent",
+          type: "channel",
+          title: "Any channel"
+        }
       },
       from: {
         userId: "1234567890",

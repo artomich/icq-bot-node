@@ -55,7 +55,7 @@ bot.onCheckFail = (bot) => {
 </pre>
 <blockquote>You can create several ICQLife with one token. They will be work in parallel</blockquote>
 <h3>Methods and properties</h3>
-<p>ICQLife class give these properties and methods:</p>
+<p>ICQLife class gives these properties and methods:</p>
 <pre>
   <code>
 <p>
@@ -138,7 +138,7 @@ bot.onCheckFail = (bot) => {
 </code>
 </pre>
 <h3>Methods and properties</h3>
-<p>ICQWaiting class give these properties and methods:</p>
+<p>ICQWaiting class gives these properties and methods:</p>
 <pre>
   <code>
 <p>
